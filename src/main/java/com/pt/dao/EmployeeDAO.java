@@ -12,11 +12,11 @@ public class EmployeeDAO {
 	private Session ses;
 	boolean flag = false;
 	int no;
-	public int save(Employee emp) {
+	public void save(Employee emp) {
 		ses = HibernateUtillity.getInstance();
 		try {
 			tx = ses.beginTransaction();
-			 no = (int) ses.save(emp);
+			  ses.persist(emp);
 			flag = true;
 		} catch (HibernateException he) {
 			he.printStackTrace();
@@ -32,7 +32,7 @@ public class EmployeeDAO {
 			}
 		}
 
-		return no;
+
 
 	}
 

@@ -11,12 +11,11 @@ public class App
         Employee emp=null;
         EmployeeDAO dao=null;
         emp=new Employee();
-        emp.setEno(10);
-        emp.setEname("annu");
-        emp.setPhone(7392462691l);
-        emp.setSalary(40000.56f);
+        emp.setEno(11);
+        emp.setEname("annusri");
+        emp.setPhone(7702462691l);
+        emp.setSalary(44000.56f);
         dao=new EmployeeDAO();
-        int no=dao.save(emp);
-        System.out.println(no);
+        dao.save(emp);
     }
 }
